@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title>
+		@!section('title')
+	</title>
+	<head>
+		@include('theme.includes.head')
+		@include('theme.includes.headcss')
+		@!section('pagecss')
+	</head>
+	<body>
+		@include('theme.includes.navbar')
+		@!section('content') 
+		@include('theme.includes.footer')
+		@include('theme.includes.footerjs')
+		@!section('pagejs')
+	</body>
+  </body>
+</html>
