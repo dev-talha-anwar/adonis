@@ -1,0 +1,18 @@
+.todo-sidebar {
+    float: left;
+    width: 230px;
+    margin-right: 20px;
+}
+.todo-content, .todo-task-history>li>.todo-task-history-desc{
+	overflow: hidden;
+}
+@media (max-width: 991px){
+	.todo-sidebar {
+	    float: none;
+	    width: 100%;
+	    margin: 0;
+	}
+	.todo-content {
+	    overflow: visible;
+	}
+}
