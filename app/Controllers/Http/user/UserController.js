@@ -5,7 +5,7 @@ class UserController {
 		return view.render('theme.dashboard')
 	}
 	async logout({auth,response}){
-		await auth.authenticator('user').logout()
+		await auth.logout()
 		return response.route('login')
 	}
 }

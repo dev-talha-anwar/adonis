@@ -1,5 +1,5 @@
 'use strict'
-const Admin = use('App/Model/Admin')
+const User = use('App/Models/User')
 const Validator = use('Validator')
 
 class AdminRegisterController {
@@ -12,9 +12,10 @@ class AdminRegisterController {
   		await request.validateAll({
 			username: 'required|string|max:100',
 			email: 'required|email|unique:users',
-			password: 'required|string'
+			password: 'required|string',
+			role: 'admin'
 		})
-  		if(await Admin.create(request.only(['username', 'email', 'password']))){
+  		if(await User.create(request.only(['username', 'email', 'password']))){
 			session.flash({ success: "Registration Successfull" })
 		}else{
 			session.flash({ error: "Something Went Wrong" })

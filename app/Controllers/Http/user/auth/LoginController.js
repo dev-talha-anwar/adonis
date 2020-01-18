@@ -16,7 +16,7 @@ class LoginController {
 			password: 'required|string'
 		})
 		const { email, password } = request.all()
-	    if(await auth.authenticator('user').attempt(email, password)){
+	    if(await auth.attempt(email, password)){
 	    	return response.route('index')
 	    }else{
 	    	session.flash({error : "Something Went Wrong."})

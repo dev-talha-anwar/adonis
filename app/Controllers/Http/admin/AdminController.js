@@ -5,7 +5,7 @@ class AdminController {
 		return view.render('admin.index')
 	}
 	async logout({auth,response}){
-		await auth.authenticator('admin').logout()
+		await auth.logout()
 		return response.route('admin.login')
 	}
 }

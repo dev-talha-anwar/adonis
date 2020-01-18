@@ -1,6 +1,5 @@
 'use strict'
-const Admin = use('App/Models/Admin')
-
+const User = use('App/Models/User')
 /*
 |--------------------------------------------------------------------------
 | AdminSeeder
@@ -16,7 +15,7 @@ const Factory = use('Factory')
 
 class AdminSeeder {
   async run () {
-  	await Admin.create({ username: 'Admin', email : 'admin@site.com', password : 'admin123'})
+  	await User.create({ username: 'Admin', email : 'admin@site.com', password : 'admin123', role: "admin"})
   }
 }
 

@@ -15,7 +15,7 @@ class AdminLoginController {
 			password: 'required|string'
 		})
 		const { email, password } = request.all()
-	    if(await auth.authenticator('admin').attempt(email, password)){
+	    if(await auth.attempt(email, password)){
 	    	return response.route('adminindex')
 	    }else{
 	    	session.flash({error : "Something Went Wrong."})
