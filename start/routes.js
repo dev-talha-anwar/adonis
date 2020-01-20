@@ -8,6 +8,7 @@ Route.group(() => {
 		Route.post('login', 'LoginController.login').as('login')
 		Route.get('register','RegisterController.registerform').as('showRegisterForm')
 		Route.post('register', 'RegisterController.register').as('register')
+		Route.get('verify/:token','RegisterController.verifyEmail').as('register.email')
 }).namespace('user/auth').middleware(['guest'])
 Route.group(() => {
 	Route.get('users', 'UserController.show').as('dashboard')

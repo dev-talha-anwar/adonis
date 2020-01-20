@@ -1,6 +1,10 @@
 'use strict'
 const Validator = use('Validator')
 const User = use('App/Models/User')
+const Mail = use('Mail')
+const Encryption = use('Encryption')
+const Helper = use('App/Helpers')
+const helper = new Helper()
 
 class RegisterController {
 
@@ -15,12 +19,25 @@ class RegisterController {
 			email: 'required|email|unique:users',
 			password: 'required|string'
 		})
-  		if(await User.create(request.only(['username', 'email', 'password']))){
-			session.flash({ success: "Registration Successfull" })
+		const validatedData = request.only(['username', 'email', 'password'])
+		const email_verified_at = Encryption.encrypt(helper.time())
+		validatedData.email_verified_at = email_verified_at
+		const user = await User.create(validatedData)
+  		if(user){
+  			await Mail.send('theme.auth.mails.register', user.toJSON(), (message) => {
+		      message
+		        .to(user.email)
+		        .from('someone@example.com')
+		        .subject('Confirm Your Email')
+		    })
+			session.flash({ success: "Registration Successfull.You Must Verify your Email to signin." })
 		}else{
 			session.flash({ error: "Something Went Wrong" })
 		}
     	return response.redirect('back')
+  	}
+  	verifyEmail({params}){
+
   	}
 }
 
