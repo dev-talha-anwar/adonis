@@ -22,7 +22,7 @@
         <div class="row block-9">
           <div class="offset-md-3 col-md-6 pr-md-5">
             <form action="{{ route('register') }}" method="post">
-              @include('theme.includes.alert')
+              @include('common.alert')
               {{ csrfField() }}
               <div class="form-group">
                 <input name="username" type="text" class="form-control" placeholder="Your Name" value="{{old('username')}}">

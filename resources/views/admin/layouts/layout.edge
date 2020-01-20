@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @include("admin.includes.header")
+        <title>
+            Admin Panel
+        </title>
+        @include("admin.includes.headcss")
+        @!section('pagecss')
+    </head>
+    <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
+        <div id="adminapp">
+            @include('admin.includes.headercontent')
+             <!-- BEGIN CONTAINER -->
+            <div class="page-container">
+                @include('admin.includes.navbar')
+                @!section('content')
+            </div>
+        </div>
+        @include('admin.includes.footer')
+        @include('admin.includes.footerjs')
+    </body>
+</html>
+
+
