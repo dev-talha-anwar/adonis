@@ -1,6 +1,7 @@
 const { hooks } = require('@adonisjs/ignitor')
 
 hooks.after.providersBooted(() => {
+
   const Exception = use('Exception')
   Exception.handle('InvalidSessionException', async (error, { request,response, session }) => {
   	if(request.url().startsWith("/admin")){
@@ -18,6 +19,8 @@ hooks.after.providersBooted(() => {
         return response.route('dashboard')
       }  
     }
-    
   })
+  const View = use('View')
+  const Env = use('Env')
+  View.global('app_url', () => Env.get('APP_URL'))
 })

@@ -15,15 +15,19 @@ class LoginController {
 			email: 'required|email',
 			password: 'required|string'
 		})
-		const { email, password } = request.all()
-	    if(await auth.attempt(email, password)){
-	    	return response.route('index')
-	    }else{
-	    	session.flash({error : "Something Went Wrong."})
-	    	return response.redirect('back')
-	    }
+		if(await User.query().where({email_verified_at:null,email:request.input('email'),role:'user'}).first()){
+			const { email, password } = request.all()
+		    if(await auth.attempt(email, password)){
+		    	return response.route('index')
+		    }else{
+		    	session.flash({error : "Something Went Wrong."})
+		    	return response.redirect('back')
+		    }
+		}else{
+			session.flash({error : "Your Email is Not Verified."})
+		    return response.redirect('back')
+		}	
   	}
-
 }
 
 module.exports = LoginController

@@ -1,0 +1,35 @@
+@layout('theme.layouts.app.edge')
+@section('content')
+    <div class="hero-wrap js-fullheight">
+      <div class="overlay"></div>
+      <div id="particles-js"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+        <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Verify</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Verify</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="ftco-section contact-section ftco-degree-bg">
+      <div class="container bg-light">
+        <div class="row d-flex mb-5 contact-info">
+          <div class="col-md-12 mb-4">
+            <h2 class="h4">Verify</h2>
+          </div>
+        </div>
+        <div class="row block-9">
+          <div class="offset-md-3 col-md-6 pr-md-5">
+              <div class="alert alert-success alert-dismissible">
+                <div class="close" data-dismiss="alert">&times;</div>
+                  Your Email is Verified. You Can Sign in now.
+              </div>
+              <a class="btn btn-primary" href="{{route('showLoginForm')}}">
+                Sign in
+              </a>
+          </div>
+        </div>
+      </div>
+    </section>
+@endsection
