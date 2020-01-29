@@ -12,7 +12,7 @@ class LoginController {
   	async login({auth,request,view,session,response}){
 
   		await request.validateAll({
-			email: 'required|email',
+			email: 'required|email|exists:users,email',
 			password: 'required|string'
 		})
 		if(await User.query().where({email_verified_at:null,email:request.input('email'),role:'user'}).first()){

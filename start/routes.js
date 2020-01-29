@@ -9,7 +9,12 @@ Route.group(() => {
 		Route.get('register','RegisterController.registerform').as('showRegisterForm')
 		Route.post('register', 'RegisterController.register').as('register')
 		Route.get('verify/:token','RegisterController.verifyEmail').as('verify.email')
+		Route.get('user/forgotpassword','ForgotPasswordController.showemailform').as('forgot.password')
+		Route.post('user/forgotpassword','ForgotPasswordController.sendemail').as('forgot.password.submit')
+		Route.get('user/resetpassword/:token','ForgotPasswordController.showresetform').as('forgot.reset')
+		Route.get('user/resetpassword','ForgotPasswordController.resetpassword').as('forgot.reset.submit')
 }).namespace('user/auth').middleware(['guest'])
+
 Route.group(() => {
 	Route.get('users', 'UserController.show').as('dashboard')
 	Route.get('logout', 'UserController.logout').as('logout')

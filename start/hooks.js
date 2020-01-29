@@ -11,14 +11,17 @@ hooks.after.providersBooted(() => {
   	}
   })
   Exception.handle('HttpException', async (error, {auth, response, session }) => {
-    if(auth.user.hasOwnProperty('role')){
-      if (auth.user.role == 'admin') {
-        return response.route('adminindex')
+    if(auth.user){
+        if(auth.user.hasOwnProperty('role')){
+        if (auth.user.role == 'admin') {
+          return response.route('adminindex')
+        }
+        else if(auth.user.role == 'user'){
+          return response.route('dashboard')
+        }  
       }
-      else if(auth.user.role == 'user'){
-        return response.route('dashboard')
-      }  
     }
+    
   })
   const View = use('View')
   const Env = use('Env')

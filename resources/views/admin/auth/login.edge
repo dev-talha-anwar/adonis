@@ -49,8 +49,7 @@
         <!-- BEGIN LOGIN -->
         <div class="content">
             <!-- BEGIN LOGIN FORM -->
-            <div class="" id="errorsdiv" style="display: none;"></div> 
-            <form id="loginform" class="login-form" method="POST" action="{{ route('admin.login') }}">
+            <form method="POST" action="{{ route('admin.login') }}">
                 @include('common.alert')
                 {{ csrfField() }}
                 <h3 class="form-title font-purple">Sign In</h3>
@@ -73,7 +72,7 @@
                     </div>
                 </div>
                 <div class="form-actions">
-                    <button id="submitbtn" class="btn purple btn-block uppercase mt-ladda-btn ladda-button" data-style="zoom-in">
+                    <button type="submit" class="btn purple btn-block uppercase" data-style="zoom-in">
                         <span class="ladda-label">
                             <i class="icon-login"></i> Login</span>
                         <span class="ladda-spinner"></span>

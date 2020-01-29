@@ -1,5 +1,7 @@
 'use strict'
 const Validator = use('Validator')
+const User = use('App/Models/User')
+
 
 class AdminLoginController {
 
@@ -11,16 +13,21 @@ class AdminLoginController {
   	async login({auth,request,view,session,response}){
 
   		await request.validateAll({
-			email: 'required|email',
+			email: 'required|email|exists:users,email',
 			password: 'required|string'
 		})
-		const { email, password } = request.all()
-	    if(await auth.attempt(email, password)){
-	    	return response.route('adminindex')
-	    }else{
-	    	session.flash({error : "Something Went Wrong."})
-	    	return response.redirect('back')
-	    }
+		if(await User.query().where({email:request.input('email'),role:'admin'}).first()){
+			const { email, password } = request.all()
+		    if(await auth.attempt(email, password)){
+		    	return response.route('adminindex')
+		    }else{
+		    	session.flash({error : "Something Went Wrong."})
+		    	return response.redirect('back')
+		    }
+		}else{
+			session.flash({error : "Invalid Email."})
+		    return response.redirect('back')
+		}
   	}
 
 }
