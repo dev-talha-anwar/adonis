@@ -50,7 +50,7 @@ class ForgotPasswordController {
   	async resetpassword({auth,request,view,session,response}){
   		await request.validateAll({
 			password: 'required',
-			token: 
+			token: 'required'
 		})
 		const user = await User.query().where({email_verified_at:null,email:request.input('email'),role:'user'}).first()
 		if(user){
