@@ -7,14 +7,15 @@
 
     <div class="collapse navbar-collapse" id="ftco-nav">
       <ul class="navbar-nav ml-auto">
-        @if(auth.user.role == 'user')
+        @loggedIn
+          @is('user')
           <li class="nav-item active"><a href="{{route('dashboard')}}" class="nav-link">dashboard</a></li>
           <li class="nav-item active"><a href="{{route('logout')}}" class="nav-link">Logout</a></li>
-        @endif
-        @unless(auth.user)
+          @endis
+        @else
           <li class="nav-item active"><a href="{{route('showLoginForm')}}" class="nav-link">Login</a></li>
           <li class="nav-item active"><a href="{{route('showRegisterForm')}}" class="nav-link">Register</a></li>
-        @endunless
+        @endloggedIn
         <!--
           <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
