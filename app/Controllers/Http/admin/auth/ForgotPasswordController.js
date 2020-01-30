@@ -9,7 +9,7 @@ const Hash = use('Hash')
 class ForgotPasswordController {
 	
 	showemailform ({ request, view }) {
-    	return view.render('theme.auth.forgotpassword');
+    	return view.render('admin.auth.forgotpassword');
   	}
 
   	async sendemail({auth,request,view,session,response}){
@@ -20,11 +20,11 @@ class ForgotPasswordController {
 		const user = await User.query().where({email:request.input('email')}).first()
 		if(user){
 			const roles = await user.getRoles()
-			if(roles.includes('user')){
+			if(roles.includes('admin')){
 				const forgot_password_token = Encryption.encrypt(Helper.time()+user.username)
 		  		user.forgot_password_token = forgot_password_token
 		  		if(await user.save()){
-		    		await Mail.send('theme.auth.mails.forgotpassword',{token:forgot_password_token}, (message) => {
+		    		await Mail.send('admin.auth.mails.forgotpassword',{token:forgot_password_token}, (message) => {
 		  		      message
 		  		        .to(user.email)
 		  		        .from('someone@example.com')
@@ -40,7 +40,7 @@ class ForgotPasswordController {
   	}
 
   	async showresetform({params,view}){
-		return view.render('theme.auth.resetpassword',{forgot_password_token:params.token})
+		return view.render('admin.auth.resetpassword',{forgot_password_token:params.token})
   	}
 
   	async resetpassword({auth,request,view,session,response}){
@@ -52,13 +52,13 @@ class ForgotPasswordController {
 		const user = await User.query().where({forgot_password_token:decodeURIComponent(request.input('token'))}).first()
 		if(user){
 			const roles = await user.getRoles()
-			if(roles.includes('user')){
+			if(roles.includes('admin')){
 				user.password = request.input('password')
 		  		user.forgot_password_token = null
 		  		user.email_verified_at= Helper.currentTime()
 		  		if(await user.save()){
 		  			session.flash({ msg: "Your Password has been reset You can Sign in now.",type: 'success' })
-		  			return response.route('login')
+		  			return response.route('admin.login')
 				}
 			}else{
 				session.flash({msg: 'Not a User.'})

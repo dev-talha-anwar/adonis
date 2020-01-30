@@ -15,7 +15,10 @@ class LoginController {
 			password: 'required|string'
 		})
 		session.flash({ msg: "Something Went Wrong.",type: 'error' })
-		const testuser = await User.query().where({email_verified_at:null,email:request.input('email')}).first()
+		const testuser = await User.query()
+			.whereNotNull('email_verified_at')
+			.where('email',request.input('email'))
+			.first()
 		if(testuser){
 			const roles = await testuser.getRoles()
 			if(roles.includes('user')){

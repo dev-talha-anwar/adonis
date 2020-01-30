@@ -16,7 +16,10 @@ class AdminLoginController {
 			password: 'required|string'
 		})
 		session.flash({ msg: "Something Went Wrong.",type: 'error' })
-		const testadmin = await User.query().where({email:request.input('email')}).first()
+		const testadmin = await User.query()
+			.whereNotNull('email_verified_at')
+			.where('email',request.input('email'))
+			.first()
 		if(testadmin){
 			const roles = await testadmin.getRoles()
 			if(roles.includes('admin')){
