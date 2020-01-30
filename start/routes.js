@@ -5,6 +5,7 @@ const Route = use('Route')
 Route.get('/','WelcomeController.index').as('index').namespace('user')
 
 Route.group(() => {
+
 	Route.get('login','LoginController.loginform').as('showLoginForm')
 	Route.post('login', 'LoginController.login').as('login')
 	Route.get('register','RegisterController.registerform').as('showRegisterForm')
@@ -18,6 +19,7 @@ Route.group(() => {
 }).namespace('user/auth').middleware(['guest'])
 
 Route.group(() => {
+
 	Route.get('users', 'UserController.show').as('dashboard')
 	Route.get('logout', 'UserController.logout').as('logout')
 	
@@ -25,6 +27,7 @@ Route.group(() => {
 
 //admin routes
 Route.group(() => {
+
 	Route.get('login','AdminLoginController.loginform').as('showAdminLoginForm')
 	Route.post('login', 'AdminLoginController.login').as('admin.login')
 	Route.get('forgot/password','ForgotPasswordController.showemailform').as('admin.forgot.password')
@@ -35,7 +38,10 @@ Route.group(() => {
 }).prefix('admin').namespace('admin/auth').middleware(['guest'])
 
 Route.group(() => {
+
 	Route.get('/', 'AdminController.show').as('adminindex')
 	Route.get('logout', 'AdminController.logout').as('admin.logout')
+	Route.resource('general/settings', 'GeneralSettingController')
+  		.only(['index','update'])
 
 }).prefix('admin').namespace('admin').middleware(['auth','is:admin'])

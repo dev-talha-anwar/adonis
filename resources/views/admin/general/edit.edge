@@ -1,7 +1,8 @@
-@extends('adminviews.layouts.layout')
+@layout('admin.layouts.layout')
 @section('pagecss')
-<link href="{{asset('adminassets')}}/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
+<link href="{{assetsUrl('adminassets') }}/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
 @endsection
+
 @section('content')
 <div class="page-content-wrapper">
   <!-- BEGIN CONTENT BODY -->
@@ -23,7 +24,7 @@
                     <div class="col-md-9">
                       <div class="fileinput fileinput-new" data-provides="fileinput">
                         <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-                          <img src="{{Storage::disk('public')->url($general->logo)}}" alt=""> </div>
+                          <img src="" alt=""> </div>
                           <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
                           <div>
                             <span class="btn default btn-file">
@@ -36,14 +37,16 @@
 
                         </div>
                       </div>
-                      @foreach(json_decode($general->social_links) as $key => $value)
+                     {{--
+                       @foreach(json_decode($general->social_links) as $key => $value)
                       <div class="form-group last">
                         <label class="control-label col-md-3">{{$key}}</label>
                         <div class="col-md-9 form-group form-md-line-input has-success">
                           <input type="text" class="form-control border-purple" placeholder="{{$key}}" name="{{$key}}" value="{{$value}}">
                         </div>
                       </div>
-                      @endforeach
+                      @endforeach 
+                      --}}
                     </div>
                     <div class="form-actions">
                       <div class="row">
@@ -67,22 +70,7 @@
           <!-- END CONTENT BODY -->
         </div>
         <!-- END CONTENT -->
-        @endsection
-        @section('pagejs')
-        <script src="{{asset('adminassets')}}/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js" type="text/javascript"></script>
-        <script>
-          $(function(){
-            $('form input').keydown(function (e) {
-              if (e.keyCode == 13) {
-                e.preventDefault();
-                $("#submitbtn").click();
-              }
-            });
-            $('#submitbtn').on('click',function(e){
-              var form = $('.updategeneralform')[0];
-              var formData = new FormData(form);
-              ajax("{{route('general.update')}}",'POST',formData,this);
-            });
-          });
-        </script>
-        @endsection
+@endsection
+@section('pagejs')
+<script src="{{assetsUrl('adminassets') }}/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js" type="text/javascript"></script>
+@endsection
