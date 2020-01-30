@@ -15,10 +15,9 @@ class AdminRegisterController {
 			password: 'required|string',
 			role: 'admin'
 		})
+		session.flash({ msg: "Something Went Wrong.",type: 'error' })
   		if(await User.create(request.only(['username', 'email', 'password']))){
-			session.flash({ success: "Registration Successfull" })
-		}else{
-			session.flash({ error: "Something Went Wrong" })
+			session.flash({ msg: "Registration Successfull",type:'success' })
 		}
     	return response.redirect('back')
   	}

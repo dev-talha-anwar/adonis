@@ -10,19 +10,7 @@ hooks.after.providersBooted(() => {
   		return response.route('login')
   	}
   })
-  Exception.handle('HttpException', async (error, {auth, response, session }) => {
-    if(auth.user){
-        if(auth.user.hasOwnProperty('role')){
-        if (auth.user.role == 'admin') {
-          return response.route('adminindex')
-        }
-        else if(auth.user.role == 'user'){
-          return response.route('dashboard')
-        }  
-      }
-    }
-    
-  })
+
   const View = use('View')
   const Env = use('Env')
   View.global('app_url', () => Env.get('APP_URL'))
