@@ -16,8 +16,9 @@
               <i class="fa fa-gift"></i> Change General Settings </div>
             </div>
             <div class="portlet-body form">
-              <div class="" id="errorsdiv" style="display: none;"></div>
-              <form action="#" class="form-horizontal form-bordered updategeneralform" >
+              <form action="{{ route('admin.general.settings.update') }}" class="form-horizontal form-bordered updategeneralform" enctype="multipart/form-data">
+                @include('common.alert')
+                {{ csrfField() }}
                 <div class="form-body">
                   <div class="form-group last">
                     <label class="control-label col-md-3">Logo</label>

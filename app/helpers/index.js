@@ -7,4 +7,7 @@ module.exports = class Helper {
 		const today = new Date()
 		return today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+' '+today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
 	}
+	fileName(type){
+		return `${String.fromCharCode(Math.floor(Math.random() * 1000000)) + new Date().getTime()}.${type}`
+	}
 }

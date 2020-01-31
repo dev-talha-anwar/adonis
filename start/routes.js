@@ -41,7 +41,7 @@ Route.group(() => {
 
 	Route.get('/', 'AdminController.show').as('adminindex')
 	Route.get('logout', 'AdminController.logout').as('admin.logout')
-	Route.resource('general/settings', 'GeneralSettingController')
-  		.only(['index','update'])
+	Route.get('general/settings', 'GeneralSettingController.edit').as('admin.general.settings.edit')
+	Route.post('general/settings', 'GeneralSettingController.update').as('admin.general.settings.update')
 
 }).prefix('admin').namespace('admin').middleware(['auth','is:admin'])
