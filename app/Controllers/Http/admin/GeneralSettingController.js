@@ -4,9 +4,10 @@ const Helpers = use('Helpers')
 const helper = use('App/Helpers')
 const Helper = new helper()
 
+
 class GeneralSettingController {
   async edit ({ request, response, view }) {
-    const generalsettings = GeneralSetting.query().first()
+    const generalsettings = await GeneralSetting.query().first()
     return view.render('admin.general.edit',{generalsettings:generalsettings})
   }
 
@@ -16,14 +17,19 @@ class GeneralSettingController {
 			size: '2mb',
 			extnames: ['jpg', 'jpeg' ,'png']
 		})
-		await logo.move(Helpers.tmpPath('storage'), (file) =>{
-			return {
-				name: Helper.fileName(file.subtype),
-			}
+		const name  = Helper.fileName(logo.subtype)
+		await logo.move(Helpers.publicPath('storage'), {
+			name: name
 		})
 		session.flash({ msg: "Something Went Wrong.",type: 'error' })
 		if (logo.moved()) {
-			session.flash({msg : "Settings Saved." ,type: 'success'})
+			const generalsettings = await GeneralSetting.query().first()
+			if(Helper.deleteFile(Helpers.publicPath('storage/'+generalsettings.logo))){
+				generalsettings.logo = name;
+				if(await generalsettings.save()){
+					session.flash({msg : "Settings Saved." ,type: 'success'})
+				}
+			}
 		}else{
 			session.flash({msg : logo.error()})
 		}

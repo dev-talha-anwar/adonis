@@ -16,7 +16,7 @@
               <i class="fa fa-gift"></i> Change General Settings </div>
             </div>
             <div class="portlet-body form">
-              <form action="{{ route('admin.general.settings.update') }}" class="form-horizontal form-bordered updategeneralform" enctype="multipart/form-data">
+              <form action="{{ route('admin.general.settings.update') }}" class="form-horizontal form-bordered updategeneralform" enctype="multipart/form-data" method="post">
                 @include('common.alert')
                 {{ csrfField() }}
                 <div class="form-body">
@@ -25,7 +25,7 @@
                     <div class="col-md-9">
                       <div class="fileinput fileinput-new" data-provides="fileinput">
                         <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-                          <img src="" alt=""> </div>
+                          <img src="{{ assetsUrl(storageFile(generalsettings.logo)) }}" alt=""> </div>
                           <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
                           <div>
                             <span class="btn default btn-file">
@@ -52,7 +52,7 @@
                     <div class="form-actions">
                       <div class="row">
                         <div class="col-md-offset-3 col-md-9">
-                          <button id="submitbtn" type="button" class="btn purple uppercase mt-ladda-btn ladda-button" data-style="zoom-in">
+                          <button type="submit" class="btn purple uppercase" data-style="zoom-in">
                             <span class="ladda-label">
                               <i class="glyphicon glyphicon-saved"></i>
                               Update

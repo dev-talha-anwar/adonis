@@ -1,4 +1,5 @@
 const { hooks } = require('@adonisjs/ignitor')
+const Helpers = use('Helpers')
 
 hooks.after.providersBooted(() => {
 
@@ -10,8 +11,8 @@ hooks.after.providersBooted(() => {
   		return response.route('login')
   	}
   })
-
   const View = use('View')
   const Env = use('Env')
   View.global('app_url', () => Env.get('APP_URL'))
+  View.global('storageFile', (file) => Env.get('APP_URL')+"/storage/"+file)
 })
