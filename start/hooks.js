@@ -1,5 +1,4 @@
 const { hooks } = require('@adonisjs/ignitor')
-const Helpers = use('Helpers')
 
 hooks.after.providersBooted(() => {
 
