@@ -23,7 +23,8 @@ const providers = [
   'adonis-request-validation/providers/RequestValidationProvider',
   '@adonisjs/mail/providers/MailProvider',
   __dirname+'/../providers/ExistsRuleProvider',
-  'adonis-acl/providers/AclProvider'
+  __dirname+'/../providers/CheckTypeOfArrayRuleProvider',
+  'adonis-acl/providers/AclProvider',
 ]
 
 /*

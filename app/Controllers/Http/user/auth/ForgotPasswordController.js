@@ -13,9 +13,6 @@ class ForgotPasswordController {
   	}
 
   	async sendemail({auth,request,view,session,response}){
-  		await request.validateAll({
-			email: 'required|email|exists:users,email'
-		})
 		session.flash({ msg: "Something Went Wrong.",type: 'error' })
 		const user = await User.query().where({email:request.input('email')}).first()
 		if(user){
@@ -44,10 +41,6 @@ class ForgotPasswordController {
   	}
 
   	async resetpassword({auth,request,view,session,response}){
-  		await request.validateAll({
-			password: 'required|string',
-			token: "required|string"
-		})
 		session.flash({ msg: "Something Went Wrong.",type: 'error' })
 		const user = await User.query().where({forgot_password_token:decodeURIComponent(request.input('token'))}).first()
 		if(user){
