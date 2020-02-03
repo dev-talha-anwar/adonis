@@ -15,7 +15,7 @@ class AdminGeneralSetting {
       names: 'array',
       links: 'array',
       'names.*': 'string|required',
-      'names.*': 'string|required'
+      'links.*': 'string|required'
     }
   }
   get messages () {
