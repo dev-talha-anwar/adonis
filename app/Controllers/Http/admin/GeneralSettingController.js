@@ -15,17 +15,7 @@ class GeneralSettingController {
   }
 
   async update ({ request, response,session }) {
-	  	await request.validateAll({
-			names: 'array',
-			links: 'array',
-			'names.*':'string',
-			'names.*': 'string'
-		})
-		const data = sanitize(request.all(), {
-			'names.*': 'trim|strip_tags|escape',
-			'links.*': 'trim|strip_tags|escape'
-		})
-		const {names,links} = data
+		const {names,links} = request.all()
 		session.flash({ msg: "Something Went Wrong.",type: 'error' })
 		if(request.file('logo')){
 			const logo = request.file('logo', {

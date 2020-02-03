@@ -11,10 +11,6 @@ class AdminLoginController {
   	}
 
   	async login({auth,request,view,session,response}){
-  		await request.validateAll({
-			email: 'required|email|exists:users,email',
-			password: 'required|string'
-		})
 		session.flash({ msg: "Something Went Wrong.",type: 'error' })
 		const testadmin = await User.query()
 			.whereNotNull('email_verified_at')

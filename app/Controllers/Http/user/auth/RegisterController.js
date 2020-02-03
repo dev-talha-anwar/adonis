@@ -15,11 +15,6 @@ class RegisterController {
   }
 
   async register({ auth, request, response, session }) {
-    await request.validateAll({
-      username: 'required|string|max:100|unique:users|alpha_numeric',
-      email: 'required|email|unique:users',
-      password: 'required|string'
-    })
     session.flash({ msg: "Something Went Wrong.", type: 'error' })
     const validatedData = request.only(['username', 'email', 'password'])
     const forgot_password_token = Encryption.encrypt(Helper.time() + request.username)
