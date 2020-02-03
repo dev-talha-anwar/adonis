@@ -6,7 +6,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node ace test"
+    "test": "node ace test",
+    "assets-dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "assets-watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "assets-hot": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "assets-production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "keywords": [
     "adonisjs",
@@ -30,9 +34,12 @@
     "@adonisjs/validator": "^5.0.6",
     "adonis-acl": "^1.1.1",
     "adonis-request-validation": "^1.0.4",
+    "laravel-mix": "^5.0.1",
     "mysql": "^2.17.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "vue-template-compiler": "^2.6.11"
+  },
   "autoload": {
     "App": "./app"
   }
