@@ -9,11 +9,12 @@
 		@!section('pagecss')
 	</head>
 	<body>
-		@include('theme.includes.navbar')
-		@!section('content') 
-		@include('theme.includes.footer')
-		@include('theme.includes.footerjs')
-		@!section('pagejs')
+		<div id="app">
+			@include('theme.includes.navbar')
+			@!section('content') 
+			@include('theme.includes.footer')
+		</div>
 	</body>
-  </body>
+	@include('theme.includes.footerjs')
+	@!section('pagejs')
 </html>

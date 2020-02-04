@@ -1,17 +1,17 @@
 let mix = require('laravel-mix');
 
-mix.setPublicPath('public').js('resources/js/main.js', 'public/js')
+mix.setPublicPath('public').js('resources/js/app.js', 'public/js')
 
 mix.webpackConfig({
     resolve: {
         alias: {
             "@": path.resolve(
                 __dirname,
-                "resources/assets/js"
+                "resources/js"
             ),
             "@sass": path.resolve(
                 __dirname,
-                "resources/assets/sass"
+                "resources/sass"
             ),
         }
     }
