@@ -98,9 +98,209 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Index'
-});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -587,9 +787,837 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("ggfdg")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "hero-wrap js-fullheight" }, [
+        _c("div", { staticClass: "overlay" }),
+        _vm._v(" "),
+        _c("div", { attrs: { id: "particles-js" } }),
+        _vm._v(" "),
+        _c("div", { staticClass: "container" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "row no-gutters slider-text align-items-center justify-content-center",
+              attrs: { "data-scrollax-parent": "true" }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "col-md-6 ftco-animate text-center",
+                  attrs: {
+                    "data-scrollax": " properties: { translateY: '70%' }"
+                  }
+                },
+                [
+                  _c(
+                    "h1",
+                    {
+                      staticClass: "mb-4",
+                      attrs: {
+                        "data-scrollax":
+                          "properties: { translateY: '30%', opacity: 1.6 }"
+                      }
+                    },
+                    [
+                      _vm._v("We love to create "),
+                      _c("strong", [_vm._v("Beautiful")]),
+                      _vm._v(" websites")
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    {
+                      attrs: {
+                        "data-scrollax":
+                          "properties: { translateY: '30%', opacity: 1.6 }"
+                      }
+                    },
+                    [
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "btn btn-primary btn-outline-white px-5 py-3",
+                          attrs: { href: "#" }
+                        },
+                        [_vm._v("Get in touch")]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "bg-light" }, [
+        _c("section", { staticClass: "ftco-section-featured ftco-animate" }, [
+          _c(
+            "div",
+            {
+              staticClass: "container-fluid",
+              attrs: { "data-scrollax-parent": "true" }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "row no-gutters d-flex align-items-center",
+                  attrs: {
+                    "data-scrollax": " properties: { translateY: '-30%'}"
+                  }
+                },
+                [
+                  _c("div", { staticClass: "col-md-3 mb-3" }, [
+                    _c(
+                      "a",
+                      { staticClass: "featured-img", attrs: { href: "#" } },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "text-1 p-4 d-flex align-items-center"
+                          },
+                          [
+                            _c("h3", [
+                              _vm._v("The Verge"),
+                              _c("br"),
+                              _c("span", { staticClass: "tag" }, [
+                                _vm._v("Website")
+                              ])
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("img", {
+                          staticClass: "img-fluid",
+                          attrs: { src: "assets/images/image_1.jpg", alt: "" }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "text p-4 d-flex align-items-center" },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "user d-flex align-items-center" },
+                              [
+                                _c("div", {
+                                  staticClass: "user-img mr-3",
+                                  staticStyle: {
+                                    "background-image":
+                                      "url(assets/images/person_1.jpg)"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("h3", [
+                                  _vm._v("John Bruce "),
+                                  _c("br"),
+                                  _c("span", { staticClass: "position" }, [
+                                    _vm._v("Designer")
+                                  ])
+                                ])
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("div", { staticClass: "row no-gutters" }, [
+                      _c("div", { staticClass: "col-md-12" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "row no-gutters d-flex align-items-end"
+                          },
+                          [
+                            _c("div", { staticClass: "col-md-8" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "featured-img",
+                                  attrs: { href: "#" }
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "text-1 p-4 d-flex align-items-center"
+                                    },
+                                    [
+                                      _c("h3", [
+                                        _vm._v("Racks"),
+                                        _c("br"),
+                                        _c("span", { staticClass: "tag" }, [
+                                          _vm._v("Website")
+                                        ])
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("img", {
+                                    staticClass: "img-fluid",
+                                    attrs: {
+                                      src: "assets/images/image_5.jpg",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "text p-4 d-flex align-items-center"
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "user d-flex align-items-center"
+                                        },
+                                        [
+                                          _c("div", {
+                                            staticClass: "user-img mr-3",
+                                            staticStyle: {
+                                              "background-image":
+                                                "url(assets/images/person_1.jpg)"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("h3", [
+                                            _vm._v("John Bruce "),
+                                            _c("br"),
+                                            _c(
+                                              "span",
+                                              { staticClass: "position" },
+                                              [_vm._v("Designer")]
+                                            )
+                                          ])
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-4" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "featured-img",
+                                  attrs: { href: "#" }
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "text-1 p-4 d-flex align-items-center"
+                                    },
+                                    [
+                                      _c("h3", [
+                                        _vm._v("Zendesk"),
+                                        _c("br"),
+                                        _c("span", { staticClass: "tag" }, [
+                                          _vm._v("Website")
+                                        ])
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("img", {
+                                    staticClass: "img-fluid",
+                                    attrs: {
+                                      src: "assets/images/image_4.jpg",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "text p-4 d-flex align-items-center"
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "user d-flex align-items-center"
+                                        },
+                                        [
+                                          _c("div", {
+                                            staticClass: "user-img mr-3",
+                                            staticStyle: {
+                                              "background-image":
+                                                "url(assets/images/person_1.jpg)"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("h3", [
+                                            _vm._v("John Bruce "),
+                                            _c("br"),
+                                            _c(
+                                              "span",
+                                              { staticClass: "position" },
+                                              [_vm._v("Designer")]
+                                            )
+                                          ])
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-md-12" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "row no-gutters d-flex align-items-start"
+                          },
+                          [
+                            _c("div", { staticClass: "col-md-8" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "featured-img",
+                                  attrs: { href: "#" }
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "text-1 p-4 d-flex align-items-center"
+                                    },
+                                    [
+                                      _c("h3", [
+                                        _vm._v("Curator"),
+                                        _c("br"),
+                                        _c("span", { staticClass: "tag" }, [
+                                          _vm._v("Website")
+                                        ])
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("img", {
+                                    staticClass: "img-fluid",
+                                    attrs: {
+                                      src: "assets/images/image_6.jpg",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "text p-4 d-flex align-items-center"
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "user d-flex align-items-center"
+                                        },
+                                        [
+                                          _c("div", {
+                                            staticClass: "user-img mr-3",
+                                            staticStyle: {
+                                              "background-image":
+                                                "url(assets/images/person_1.jpg)"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("h3", [
+                                            _vm._v("John Bruce "),
+                                            _c("br"),
+                                            _c(
+                                              "span",
+                                              { staticClass: "position" },
+                                              [_vm._v("Designer")]
+                                            )
+                                          ])
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "col-md-4" }, [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "featured-img",
+                                  attrs: { href: "#" }
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "text-1 p-4 d-flex align-items-center"
+                                    },
+                                    [
+                                      _c("h3", [
+                                        _vm._v("Tasty"),
+                                        _c("br"),
+                                        _c("span", { staticClass: "tag" }, [
+                                          _vm._v("Website")
+                                        ])
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("img", {
+                                    staticClass: "img-fluid",
+                                    attrs: {
+                                      src: "assets/images/image_3.jpg",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "text p-4 d-flex align-items-center"
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "user d-flex align-items-center"
+                                        },
+                                        [
+                                          _c("div", {
+                                            staticClass: "user-img mr-3",
+                                            staticStyle: {
+                                              "background-image":
+                                                "url(assets/images/person_1.jpg)"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("h3", [
+                                            _vm._v("John Bruce "),
+                                            _c("br"),
+                                            _c(
+                                              "span",
+                                              { staticClass: "position" },
+                                              [_vm._v("Designer")]
+                                            )
+                                          ])
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-3" }, [
+                    _c(
+                      "a",
+                      { staticClass: "featured-img", attrs: { href: "#" } },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "text-1 p-4 d-flex align-items-center"
+                          },
+                          [
+                            _c("h3", [
+                              _vm._v("Voyage"),
+                              _c("br"),
+                              _c("span", { staticClass: "tag" }, [
+                                _vm._v("Website")
+                              ])
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("img", {
+                          staticClass: "img-fluid",
+                          attrs: { src: "assets/images/image_2.jpg", alt: "" }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "text p-4 d-flex align-items-center" },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "user d-flex align-items-center" },
+                              [
+                                _c("div", {
+                                  staticClass: "user-img mr-3",
+                                  staticStyle: {
+                                    "background-image":
+                                      "url(assets/images/person_1.jpg)"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("h3", [
+                                  _vm._v("John Bruce "),
+                                  _c("br"),
+                                  _c("span", { staticClass: "position" }, [
+                                    _vm._v("Designer")
+                                  ])
+                                ])
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "row mt-5 d-flex justify-content-center" },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-md-8 text-center heading-section ftco-animate"
+                    },
+                    [
+                      _c("h2", { staticClass: "h1" }, [
+                        _vm._v("UI/UX, visual, "),
+                        _c("strong", { staticClass: "px-3" }, [
+                          _vm._v("Web designer")
+                        ]),
+                        _vm._v(
+                          " with more than 12 years of experience in designing websites and mobile apps."
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-primary mt-3 py-3 px-5",
+                            attrs: { href: "#" }
+                          },
+                          [_vm._v("Get in touch")]
+                        )
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "ftco-section" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row justify-content-center mb-5 pb-5" }, [
+            _c(
+              "div",
+              {
+                staticClass: "col-md-6 text-center heading-section ftco-animate"
+              },
+              [
+                _c("span", { staticClass: "subheading" }, [
+                  _vm._v("Our Services")
+                ]),
+                _vm._v(" "),
+                _c("h2", { staticClass: "mb-4" }, [
+                  _vm._v("Web & Mobile app design, bring your ideas to life")
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in"
+                  )
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate"
+              },
+              [
+                _c(
+                  "div",
+                  { staticClass: "media block-6 services d-block text-center" },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "d-flex justify-content-center" },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "icon color-3 d-flex justify-content-center mb-3"
+                          },
+                          [
+                            _c("span", {
+                              staticClass: "align-self-center icon-lightbulb-o"
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "media-body p-2 mt-3" }, [
+                      _c("h3", { staticClass: "heading" }, [
+                        _vm._v("Strategy")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic."
+                        )
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate"
+              },
+              [
+                _c(
+                  "div",
+                  { staticClass: "media block-6 services d-block text-center" },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "d-flex justify-content-center" },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "icon color-1 d-flex justify-content-center mb-3"
+                          },
+                          [
+                            _c("span", {
+                              staticClass: "align-self-center icon-laptop"
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "media-body p-2 mt-3" }, [
+                      _c("h3", { staticClass: "heading" }, [_vm._v("Design")]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic."
+                        )
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate"
+              },
+              [
+                _c(
+                  "div",
+                  { staticClass: "media block-6 services d-block text-center" },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "d-flex justify-content-center" },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "icon color-2 d-flex justify-content-center mb-3"
+                          },
+                          [
+                            _c("span", {
+                              staticClass: "align-self-center icon-gear"
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "media-body p-2 mt-3" }, [
+                      _c("h3", { staticClass: "heading" }, [
+                        _vm._v("Development")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic."
+                        )
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate"
+              },
+              [
+                _c(
+                  "div",
+                  { staticClass: "media block-6 services d-block text-center" },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "d-flex justify-content-center" },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "icon color-4 d-flex justify-content-center mb-3"
+                          },
+                          [
+                            _c("span", {
+                              staticClass: "align-self-center icon-live_help"
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "media-body p-2 mt-3" }, [
+                      _c("h3", { staticClass: "heading" }, [
+                        _vm._v("Help & Supports")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic."
+                        )
+                      ])
+                    ])
+                  ]
+                )
+              ]
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "ftco-section-parallax" }, [
+        _c("div", { staticClass: "parallax-img d-flex align-items-center" }, [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row d-flex justify-content-center" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-md-7 text-center heading-section heading-section-white ftco-animate"
+                },
+                [
+                  _c("h2", [_vm._v("Subcribe to our Newsletter")]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in"
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "row d-flex justify-content-center mt-5" },
+                    [
+                      _c("div", { staticClass: "col-md-6" }, [
+                        _c(
+                          "form",
+                          {
+                            staticClass: "subscribe-form",
+                            attrs: { action: "#" }
+                          },
+                          [
+                            _c("div", { staticClass: "form-group" }, [
+                              _c("span", {
+                                staticClass: "icon icon-paper-plane"
+                              }),
+                              _vm._v(" "),
+                              _c("input", {
+                                staticClass: "form-control",
+                                attrs: {
+                                  type: "text",
+                                  placeholder: "Enter email address"
+                                }
+                              })
+                            ])
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
